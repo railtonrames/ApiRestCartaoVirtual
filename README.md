@@ -4,7 +4,7 @@
 
 Consiste em uma API REST que permite o cadastro de e-mails e geração aleatória de cartões de crédito virtual, feito em C# com .Net Core e Entity Framework Core com conexão à banco de dados SQL Server, contruído durante o **Teste técnico do Projeto Vaivoa**, é a terceira etapa do processo seletivo organizado pela [Vaivoa](https://vaivoa.com "Site do Projeto").
 
-A API corresponde em cadastro de e-mails e gerações de cartões, onde há endpoints que permitem pesquisar, inserir, modificar e excluir e-mails e cartões.
+A API baseia-se em cadastro de e-mails e gerações de cartões, onde há endpoints que permitem pesquisar, inserir, modificar e excluir e-mails e cartões.
 
 Abaixo você poderá ler o artigo descrevendo passo-a-passo para a criação dessa API:
 
