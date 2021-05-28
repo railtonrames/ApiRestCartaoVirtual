@@ -28,8 +28,6 @@ namespace ApiRestCartaoVirtual
             options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
         );
 
-            services.AddScoped<IARCV_InterfaceRepository, ARCV_Repository>();
-
             services.AddControllers();
         }
 
