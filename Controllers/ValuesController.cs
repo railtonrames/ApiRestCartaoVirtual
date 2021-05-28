@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using ApiRestCartaoVirtual.Data;
 using ApiRestCartaoVirtual.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace EFCore.WebAPI.Controllers
+namespace ApiRestCartaoVirtual.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -17,11 +18,9 @@ namespace EFCore.WebAPI.Controllers
         [HttpGet]
         public ActionResult Get()
         {
-            using (var contexto = new EmailContext())
-            {
-                var listEmail = contexto.Email.ToList();
-                return Ok(listEmail);
-            }
+            using var contexto = new EmailContext();
+            var listEmail = contexto.Email.ToList();
+            return Ok(listEmail);
         }
 
         // GET FILTRO api/values/filtro/<E-MAIL>
@@ -37,9 +36,21 @@ namespace EFCore.WebAPI.Controllers
         [HttpGet("{enderecoEmail}")]
         public ActionResult Get(String enderecoEmail)
         {
-            var email = new Email { Endereco = enderecoEmail };
+            StringBuilder sb = new StringBuilder(16);
+            Random random = new Random();
+            for (int i = 0; i < 16; i++){sb.Append(random.Next(0, 9));}
+
+            var email = new Email
+            {
+                Endereco = enderecoEmail,
+                Cartoes = new List<Cartao>
+                                    {
+                                        new Cartao { Numero = sb.ToString()}
+                                    }
+            };
             using (var contexto = new EmailContext())
             {
+
                 contexto.Email.Add(email);
                 contexto.SaveChanges();
             }
