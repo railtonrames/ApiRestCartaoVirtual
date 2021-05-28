@@ -54,7 +54,7 @@ namespace ApiRestCartaoVirtual.Controllers
                 contexto.Email.Add(email);
                 contexto.SaveChanges();
             }
-            return Ok();
+            return Ok(sb.ToString());
         }
 
         //INSERT api/values/update/<E-MAIL NOVO>/<ID>
