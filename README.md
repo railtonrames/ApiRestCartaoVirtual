@@ -14,6 +14,7 @@ Abaixo na seção "Passo-a-passo" você poderá ler o artigo descrevendo os pass
 - Microsoft Sql Server Manegement Studio 18
 - Postman
 ## Bibliotecas NuGet
+- Microsoft.AspNetCore.Mvc.NewtonsoftJson
 - Microsoft.EntityFrameworkCore
 - Microsoft.EntityFrameworkCore.Analyzers
 - Microsoft.EntityFrameworkCore.Design
