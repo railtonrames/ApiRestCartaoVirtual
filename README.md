@@ -60,19 +60,67 @@ namespace ApiRestCartaoVirtual.Models
 ```
 - Passo 7: Abra o models/cartao.cs e crie as propriedades da classe. Conforme o código abaixo:
 ```c#
-?
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ApiRestCartaoVirtual.Models
+{
+    public class Cartao
+    {
+        public int Id { get; set; }
+        public String Numero { get; set; }
+        public Email Email { get; set; }
+        public int EmailId { get; set; }
+    }
+}
 ```
 - Passo 8: Abra o data/EmailContext.cs e crie os Dbsets do contexto. Confira o código abaixo:
 ```c#
-?
+using ApiRestCartaoVirtual.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ApiRestCartaoVirtual.Data
+{
+    public class EmailContext : DbContext
+    {
+        public DbSet<Email> Email { get; set; }
+        public DbSet<Cartao> Cartao { get; set; }
+    }
+}
 ```
 - Passo 9: Identifique a sua String de conexão e crie-a.
 ![Instalando Pacotes](?)
 - Passo 10: Adicione a sua String de conexão com o banco de dados no EmailContext.cs. Confira o código abaixo:
 ```c#
-?
+using ApiRestCartaoVirtual.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace ApiRestCartaoVirtual.Data
+{
+    public class EmailContext : DbContext
+    {
+        public DbSet<Email> Email { get; set; }
+        public DbSet<Cartao> Cartao { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Password=sa123456;Persist Security Info=True;User ID=sa;Initial Catalog=CartaoVirtualApp;Data Source=DESKTOP-UQDBKFD");
+        }
+    }
+}
 ```
 - Passo 11: Abra o package manager console (View > Other Windows > Package Manager Console), crie a migration (Add-Migration) e crie o banco de dados (Update-Database). Confira abaixo:
+
   - Criando a migration:
   ```bash
   Add-Migration Initial
