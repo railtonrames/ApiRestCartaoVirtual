@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ApiRestCartaoVirtual.Data;
 using ApiRestCartaoVirtual.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApiRestCartaoVirtual.Controllers
 {
@@ -19,7 +20,10 @@ namespace ApiRestCartaoVirtual.Controllers
         public ActionResult Get()
         {
             using var contexto = new EmailContext();
-            var listEmail = contexto.Email.ToList();
+            var listEmail = contexto.Email
+                .Include("Cartoes")
+                .ToList();
+
             return Ok(listEmail);
         }
 
