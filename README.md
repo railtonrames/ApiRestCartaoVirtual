@@ -121,14 +121,14 @@ namespace ApiRestCartaoVirtual.Data
 ```
 - Passo 11: Abra o package manager console (View > Other Windows > Package Manager Console), crie a migration (Add-Migration) e crie o banco de dados (Update-Database). Confira abaixo:
 
-  - Criando a migration:
-  ```bash
-  Add-Migration Initial
-  ```
-  - Executando a migration e criando o banco de dados Sql Server:
-  ```bash
-  Update-Database
-  ```
+Criando a migration:
+```bash
+Add-Migration Initial
+```
+Executando a migration e criando o banco de dados Sql Server:
+```bash
+Update-Database
+```
 - Passo 12: Crie a classe "EmailController.cs" no diretório Controllers e insira os actions results/endpoints.
 - Passo 13: No arquivo "Startup.cs", chame a biblioteca "NewtonsoftJson" dentro do método "ConfigureServices".
 - Passo 14: Abra o arquivo de configuração "launchSettings.json" dentro do diretório Properties e altere a launchUrl de "ApiRestCartaoVirtual" e "profiles".
