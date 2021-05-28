@@ -6,7 +6,7 @@ Consiste em uma API REST que permite o cadastro de e-mails e geração aleatóri
 
 A API baseia-se em cadastro de e-mails e gerações de cartões, onde há endpoints que permitem pesquisar, inserir, modificar e excluir e-mails e cartões.
 
-Abaixo você poderá ler o artigo descrevendo passo-a-passo para a criação dessa API:
+Abaixo na seção "Passo-a-passo" você poderá ler o artigo descrevendo os passos para a criação dessa API:
 
 # Tecnologias utilizadas
 ## Ambientes de desenvolvimento
