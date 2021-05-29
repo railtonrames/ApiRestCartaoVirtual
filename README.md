@@ -32,13 +32,21 @@ Abaixo na seção "Passo-a-passo" você poderá ler o artigo descrevendo os pass
 Pré-requisitos: Visual Studio 2019, SQL Server 2019 Express e bibliotecas NuGet informadas acima.
 
 - Passo 1: Após a instalação dos pré-requisitos, abra o Visual Studio 2019 e crie um novo projeto do tipo ASP.NET Core Web Application.
+
 ![Criando_Projeto](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/Criando_Projeto.PNG)
+
 - Passo 2: Crie os diretórios models e data.
+
 ![Criando_Diretórios](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/Criando_Diretorios.png)
+
 - Passo 3: Crie as classes "cartao.cs" e "email.cs" dentro do diretório models, depois crie a classe de contexto chamada de "EmailContext" dentro do diretório data. Exemplo de como criar classes:
+
 ![Criando Classes](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/Criando_Classe.png)
+
 - Passo 4: Instale os pacotes NuGets.
-![Instalando Pacotes](?)
+
+![Instalando Pacotes](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/Instalando_Packages.png)
+
 - Passo 5: Abra o models/email.cs e crie as propriedades da classe. Conforme o código abaixo:
 ```c#
 using System;
@@ -92,9 +100,9 @@ namespace ApiRestCartaoVirtual.Data
     }
 }
 ```
-- Passo 8: Identifique a sua String de conexão e crie-a.
-![Instalando Pacotes](?)
-- Passo 9: Adicione a sua String de conexão com o banco de dados no EmailContext.cs. Confira o código abaixo:
+- Passo 8: Identifique a sua String de conexão e crie-a conforme o exemplo a seguir em que você deverá modificar os dados em caixa alta conforme os dados do seu banco: "Password=SENHA_DO_SQL_SERVER_AQUI;Persist Security Info=True;User ID=LOGON_DO_SQL_SERVER_AQUI;Initial Catalog=NOME_DO_BANCO_DE_DADOS_AQUI;Data Source=NOME_DO_SERVIDOR_DO_SQL_SERVER_AQUI".
+![Identificando Dados para Conexão](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/Identificando_Dados_Conexao.jpg)
+- Passo 9: Adicione a sua String de conexão com o banco de dados no EmailContext.cs. Confira o código abaixo: 
 ```c#
 using ApiRestCartaoVirtual.Models;
 using Microsoft.EntityFrameworkCore;
@@ -294,17 +302,17 @@ services.AddControllers().AddNewtonsoftJson(options => options.SerializerSetting
 ```
 - Passo 14: Testar e utilizar a API. Endpoints:
   - GET: api/Email  -> Retorna um modelo do objeto e-mail vazio.
-  ![GET: api/Email](?)
+  ![GET: api/Email](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/get-api-email.jpg)
   - GET: api/Email/listar/{endereco} -> Lista todos os cartões de crédito virtuais de um solicitante, conforme o e-mail passado no parâmetro.
-  ![GET: api/Email/listar/{endereco}](?)
+  ![GET: api/Email/listar/{endereco}](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/get-api-email-listar-endereco.jpg)
   - POST: api/Email/inserir/{endereco} -> Insere o e-mail passado no parâmetro e retorna um número aleatório de cartão de crédito.
-  ![POST: api/Email/inserir/{endereco}](?)
+  ![POST: api/Email/inserir/{endereco}](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/post-api-email-inserir-endereco.jpg)
   - PUT: api/Email/novocartao/{endereco} -> Insere um novo cartão de crédito aleatório no e-mail passado como parâmetro.
-  ![PUT: api/Email/novocartao/{endereco}](?)
+  ![PUT: api/Email/novocartao/{endereco}](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/put-api-email-novocartao-endereco.jpg)
   - PUT: api/Email/alterar/{id} -> Altera o registro do ID passado no parâmetro conforme o model json que for enviado.
   ![PUT: api/Email/alterar/{id}](?)
   - DELETE: api/delete/{id} -> Deleta um registro conforme a ID passada no parâmetro.
-  ![DELETE: api/delete/{id}](?)
+  ![DELETE: api/delete/{id}](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/del-api-email-delete-id.jpg)
 
 # Autor
 
