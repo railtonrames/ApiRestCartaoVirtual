@@ -301,22 +301,29 @@ services.AddControllers().AddNewtonsoftJson(options => options.SerializerSetting
 "launchUrl": "api/email"
 ```
 - Passo 14: Testar e utilizar a API. Endpoints:
+
 GET: api/Email  -> Retorna um modelo do objeto e-mail vazio.
+
 ![GET: api/Email](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/get-api-email.jpg)
   
 GET: api/Email/listar/{endereco} -> Lista todos os cartões de crédito virtuais de um solicitante, conforme o e-mail passado no parâmetro.
+
 ![GET: api/Email/listar/{endereco}](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/get-api-email-listar-endereco.jpg)
   
 POST: api/Email/inserir/{endereco} -> Insere o e-mail passado no parâmetro e retorna um número aleatório de cartão de crédito.
+
 ![POST: api/Email/inserir/{endereco}](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/post-api-email-inserir-endereco.jpg)
   
 PUT: api/Email/novocartao/{endereco} -> Insere um novo cartão de crédito aleatório no e-mail passado como parâmetro.
+
 ![PUT: api/Email/novocartao/{endereco}](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/put-api-email-novocartao-endereco.jpg)
   
 PUT: api/Email/alterar/{id} -> Altera o registro do ID passado no parâmetro conforme o model json que for enviado.
+
 ![PUT: api/Email/alterar/{id}](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/put-api-email-alterar-id.jpg)
   
 DELETE: api/delete/{id} -> Deleta um registro conforme a ID passada no parâmetro.
+
 ![DELETE: api/delete/{id}](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/del-api-email-delete-id.jpg)
 
 # Autor
