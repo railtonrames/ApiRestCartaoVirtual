@@ -310,7 +310,7 @@ services.AddControllers().AddNewtonsoftJson(options => options.SerializerSetting
   - PUT: api/Email/novocartao/{endereco} -> Insere um novo cartão de crédito aleatório no e-mail passado como parâmetro.
   ![PUT: api/Email/novocartao/{endereco}](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/put-api-email-novocartao-endereco.jpg)
   - PUT: api/Email/alterar/{id} -> Altera o registro do ID passado no parâmetro conforme o model json que for enviado.
-  ![PUT: api/Email/alterar/{id}](?)
+  ![PUT: api/Email/alterar/{id}](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/put-api-email-alterar-id.jpg)
   - DELETE: api/delete/{id} -> Deleta um registro conforme a ID passada no parâmetro.
   ![DELETE: api/delete/{id}](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/del-api-email-delete-id.jpg)
 
