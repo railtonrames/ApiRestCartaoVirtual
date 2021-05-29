@@ -332,5 +332,4 @@ DELETE: api/delete/{id} -> Deleta um registro conforme a ID passada no parâmetr
 
 Railton Rames Sousa
 
-https://www.linkedin.com/in/railton-rames/
-railtonrames@gmail.com
+https://www.linkedin.com/in/railton-rames/ | railtonrames@gmail.com
