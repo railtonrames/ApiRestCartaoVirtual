@@ -32,11 +32,11 @@ Abaixo na seção "Passo-a-passo" você poderá ler o artigo descrevendo os pass
 Pré-requisitos: Visual Studio 2019, SQL Server 2019 Express e bibliotecas NuGet informadas acima.
 
 - Passo 1: Após a instalação dos pré-requisitos, abra o Visual Studio 2019 e crie um novo projeto do tipo ASP.NET Core Web Application.
-![Criando_Projeto](?)
+![Criando_Projeto](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/Criando_Projeto.PNG)
 - Passo 2: Crie os diretórios models e data.
-![Criando_Diretórios](?)
+![Criando_Diretórios](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/Criando_Diretorios.png)
 - Passo 3: Crie as classes "cartao.cs" e "email.cs" dentro do diretório models, depois crie a classe de contexto chamada de "EmailContext" dentro do diretório data. Exemplo de como criar classes:
-![Criando Classes](?)
+![Criando Classes](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/Criando_Classe.png)
 - Passo 4: Instale os pacotes NuGets.
 ![Instalando Pacotes](?)
 - Passo 5: Abra o models/email.cs e crie as propriedades da classe. Conforme o código abaixo:
