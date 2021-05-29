@@ -1,6 +1,6 @@
 # API REST de Geração de Cartão de Crédito Virtual
 
-![Gif de Demonstração](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/gif_demo_api.gif)
+![Gif de Demonstração](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/gif_demo_api_resize.gif)
 
 # Sobre o projeto
 
