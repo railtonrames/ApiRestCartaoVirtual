@@ -8,7 +8,7 @@ A API baseia-se em cadastro de e-mails e gerações de cartões, onde há endpoi
 
 Abaixo na seção "Passo-a-passo" você poderá ler o artigo descrevendo os passos para a criação dessa API:
 
-# 🛠 Tecnologias utilizadas
+# Tecnologias utilizadas
 ## Ambientes de desenvolvimento
 - Visual Studio 2019
 - Microsoft Sql Server Manegement Studio 18
