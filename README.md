@@ -35,13 +35,11 @@ Pré-requisitos: Visual Studio 2019, SQL Server 2019 Express e bibliotecas NuGet
 ![Criando_Projeto](?)
 - Passo 2: Crie os diretórios models e data.
 ![Criando_Diretórios](?)
-- Passo 3: Crie as classes "cartao.cs" e "email.cs" dentro do diretório models.
-![Criando Classes 1](?)
-- Passo 4: Crie a classe de contexto chamada de "EmailContext" dentro do diretório data.
-![Criando Classes 2](?)
-- Passo 5: Instale os pacotes NuGets.
+- Passo 3: Crie as classes "cartao.cs" e "email.cs" dentro do diretório models, depois crie a classe de contexto chamada de "EmailContext" dentro do diretório data. Exemplo de como criar classes:
+![Criando Classes](?)
+- Passo 4: Instale os pacotes NuGets.
 ![Instalando Pacotes](?)
-- Passo 6: Abra o models/email.cs e crie as propriedades da classe. Conforme o código abaixo:
+- Passo 5: Abra o models/email.cs e crie as propriedades da classe. Conforme o código abaixo:
 ```c#
 using System;
 using System.Collections.Generic;
@@ -58,7 +56,7 @@ namespace ApiRestCartaoVirtual.Models
     }
 }
 ```
-- Passo 7: Abra o models/cartao.cs e crie as propriedades da classe. Conforme o código abaixo:
+- Passo 6: Abra o models/cartao.cs e crie as propriedades da classe. Conforme o código abaixo:
 ```c#
 using System;
 using System.Collections.Generic;
@@ -76,7 +74,7 @@ namespace ApiRestCartaoVirtual.Models
     }
 }
 ```
-- Passo 8: Abra o data/EmailContext.cs e crie os Dbsets do contexto. Confira o código abaixo:
+- Passo 7: Abra o data/EmailContext.cs e crie os Dbsets do contexto. Confira o código abaixo:
 ```c#
 using ApiRestCartaoVirtual.Models;
 using Microsoft.EntityFrameworkCore;
@@ -94,9 +92,9 @@ namespace ApiRestCartaoVirtual.Data
     }
 }
 ```
-- Passo 9: Identifique a sua String de conexão e crie-a.
+- Passo 8: Identifique a sua String de conexão e crie-a.
 ![Instalando Pacotes](?)
-- Passo 10: Adicione a sua String de conexão com o banco de dados no EmailContext.cs. Confira o código abaixo:
+- Passo 9: Adicione a sua String de conexão com o banco de dados no EmailContext.cs. Confira o código abaixo:
 ```c#
 using ApiRestCartaoVirtual.Models;
 using Microsoft.EntityFrameworkCore;
@@ -119,7 +117,7 @@ namespace ApiRestCartaoVirtual.Data
     }
 }
 ```
-- Passo 11: Abra o package manager console (View > Other Windows > Package Manager Console), crie a migration (Add-Migration) e crie o banco de dados (Update-Database). Confira abaixo:
+- Passo 10: Abra o package manager console (View > Other Windows > Package Manager Console), crie a migration (Add-Migration) e crie o banco de dados (Update-Database). Confira abaixo:
 
 Criando a migration:
 ```bash
@@ -129,7 +127,7 @@ Executando a migration e criando o banco de dados Sql Server:
 ```bash
 Update-Database
 ```
-- Passo 12: Crie a classe "EmailController.cs" no diretório Controllers e insira os actions results/endpoints.
+- Passo 11: Crie a classe "EmailController.cs" no diretório Controllers e insira os actions results/endpoints.
 ```c#
 using System;
 using System.Collections.Generic;
@@ -286,15 +284,15 @@ namespace ApiRestCartaoVirtual.Controllers
     }
 }
 ```
-- Passo 13: No arquivo "Startup.cs", chame a biblioteca "NewtonsoftJson" dentro do método "ConfigureServices".
+- Passo 12: No arquivo "Startup.cs", chame a biblioteca "NewtonsoftJson" dentro do método "ConfigureServices".
 ```c#
 services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 ```
-- Passo 14: Abra o arquivo de configuração "launchSettings.json" dentro do diretório Properties e altere a launchUrl de "ApiRestCartaoVirtual" e "profiles". Veja o exemplo abaixo:
+- Passo 13: Abra o arquivo de configuração "launchSettings.json" dentro do diretório Properties e altere a launchUrl de "ApiRestCartaoVirtual" e "profiles". Veja o exemplo abaixo:
 ```json
 "launchUrl": "api/email"
 ```
-- Passo 15: Testar e utilizar a API. Endpoints:
+- Passo 14: Testar e utilizar a API. Endpoints:
   - GET: api/Email  -> Retorna um modelo do objeto e-mail vazio.
   ![GET: api/Email](?)
   - GET: api/Email/listar/{endereco} -> Lista todos os cartões de crédito virtuais de um solicitante, conforme o e-mail passado no parâmetro.
