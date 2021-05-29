@@ -8,7 +8,7 @@ A API baseia-se em cadastro de e-mails e gerações de cartões, onde há endpoi
 
 Abaixo na seção "Passo-a-passo" você poderá ler o artigo descrevendo os passos para a criação dessa API:
 
-# Tecnologias utilizadas
+# 🛠 Tecnologias utilizadas
 ## Ambientes de desenvolvimento
 - Visual Studio 2019
 - Microsoft Sql Server Manegement Studio 18
@@ -287,13 +287,26 @@ namespace ApiRestCartaoVirtual.Controllers
 }
 ```
 - Passo 13: No arquivo "Startup.cs", chame a biblioteca "NewtonsoftJson" dentro do método "ConfigureServices".
-- Passo 14: Abra o arquivo de configuração "launchSettings.json" dentro do diretório Properties e altere a launchUrl de "ApiRestCartaoVirtual" e "profiles".
+```c#
+services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+```
+- Passo 14: Abra o arquivo de configuração "launchSettings.json" dentro do diretório Properties e altere a launchUrl de "ApiRestCartaoVirtual" e "profiles". Veja o exemplo abaixo:
+```json
+"launchUrl": "api/email"
+```
 - Passo 15: Testar e utilizar a API. Endpoints:
   - GET: api/Email  -> Retorna um modelo do objeto e-mail vazio.
+  ![GET: api/Email](?)
+  - GET: api/Email/listar/{endereco} -> Lista todos os cartões de crédito virtuais de um solicitante, conforme o e-mail passado no parâmetro.
+  ![GET: api/Email/listar/{endereco}](?)
   - POST: api/Email/inserir/{endereco} -> Insere o e-mail passado no parâmetro e retorna um número aleatório de cartão de crédito.
+  ![POST: api/Email/inserir/{endereco}](?)
   - PUT: api/Email/novocartao/{endereco} -> Insere um novo cartão de crédito aleatório no e-mail passado como parâmetro.
+  ![PUT: api/Email/novocartao/{endereco}](?)
   - PUT: api/Email/alterar/{id} -> Altera o registro do ID passado no parâmetro conforme o model json que for enviado.
+  ![PUT: api/Email/alterar/{id}](?)
   - DELETE: api/delete/{id} -> Deleta um registro conforme a ID passada no parâmetro.
+  ![DELETE: api/delete/{id}](?)
 
 # Autor
 
