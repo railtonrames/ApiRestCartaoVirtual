@@ -1,5 +1,7 @@
 # API REST de Geração de Cartão de Crédito Virtual
 
+![Gif de Demonstração](https://github.com/railtonrames/ApiRestCartaoVirtual/blob/master/Assets/gif_demo_api.gif)
+
 # Sobre o projeto
 
 Consiste em uma API REST que permite o cadastro de e-mails e geração aleatória de cartões de crédito virtual, feito em C# com .Net Core e Entity Framework Core com conexão à banco de dados SQL Server, contruído durante o **Teste técnico do Projeto Vaivoa**, é a terceira etapa do processo seletivo organizado pela [Vaivoa](https://vaivoa.com "Site do Projeto").
